@@ -1,0 +1,11 @@
+@use "@scss/variables" as var;
+
+.logo {
+  width: auto;
+  height: 100px;
+  object-fit: contain;
+
+  @media (max-width: map-get(var.$breakpoints, 'sm')) {
+    transform: scale(.85);
+  }
+}

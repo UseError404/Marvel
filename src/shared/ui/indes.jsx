@@ -1,0 +1,7 @@
+export {Title} from './Title'
+export {Logo} from './Logo'
+export {Loading} from './Loading'
+export {BtnMenu} from './BtnMenu'
+export {FactsHero} from './FactsHero'
+export {AboutHero} from './AboutHero'
+export {ImageHero} from './ImageHero'

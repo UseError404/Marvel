@@ -1,0 +1,77 @@
+@use "@scss/variables" as var;
+@use "@scss/mixin" as mix;
+
+.title {
+  color: var(--white);
+  font-family: "Marvel", sans-serif;
+  @include mix.fluid-type(50px, 90px);
+  font-weight: 700;
+  line-height: 105px;
+  letter-spacing: 3px;
+  text-align: left;
+  text-transform: uppercase;
+
+  position: relative;
+  z-index: 1;
+  max-width: 754px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 350px;
+
+  @media (max-width: map-get(var.$breakpoints, 'md')) {
+    @include mix.fluid-type(30px, 90px);
+    letter-spacing: 0;
+    min-width: auto;
+  }
+}
+
+.circle {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    left: 0;
+    width: 470px;
+    height: 283px;
+    border-radius: 50%;
+    filter: blur(100px);
+    z-index: 0;
+  }
+
+  &-spider-man::before {
+    background-color: map-get(var.$colorSpiderMan, 'mainColor');
+  }
+
+  &-falcon::before {
+    background: map-get(var.$colorFalcon, 'mainColor');
+  }
+
+  &-loki::before {
+    background: map-get(var.$colorLoki, 'mainColor');
+  }
+
+  &-iron-man::before {
+    background: map-get(var.$colorIronMan, 'mainColor');
+  }
+
+  &-capitan-america::before {
+    background: map-get(var.$colorAmerica, 'mainColor');
+  }
+
+  &-hulk::before {
+    background: map-get(var.$colorHulk, 'mainColor');
+  }
+
+  &-hawkeye::before {
+    background: map-get(var.$colorHawkeye, 'mainColor');
+  }
+
+  &-black-panther::before {
+    background: map-get(var.$colorPanther, 'mainColor');
+  }
+}
+
+

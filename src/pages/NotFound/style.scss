@@ -1,0 +1,29 @@
+@use "@scss/mixin" as mix;
+@use "@scss/variables" as var;
+
+
+.notFound {
+  background-color: var(--black);
+  width: 100vw;
+  height: 100vh;
+  border-left: 1px solid var(--main-color);
+  @media (max-width: map-get(var.$breakpoints, 'lg')) {
+    padding-left: 20%;
+  }
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &__title {
+    color: var(--navigation-menu-bg);
+    font-family: "Marvel", sans-serif;
+    @include mix.fluid-type(30px, 90px);
+    font-weight: 700;
+    line-height: 105px;
+    letter-spacing: 3px;
+    text-align: left;
+    text-transform: uppercase;
+  }
+}

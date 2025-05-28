@@ -1,0 +1,54 @@
+// ==== Color ==== //
+:root {
+  --main-color: #d80101;
+  --white: rgb(255, 255, 255);
+  --white-half: rgba(255,255,255, 0.5);
+  --navigation-menu-bg: #ef9007;
+  --navigation-bg: rgb(15, 23, 33);
+  --black: #0f1721;
+}
+
+$colorSpiderMan: (
+        'mainColor': #ff0000,
+        'gradient': linear-gradient(180.00deg, rgb(165, 0, 0),rgb(0, 0, 0) 100%),
+);
+$colorFalcon: (
+        'mainColor': #b3b3b3,
+        'gradient': linear-gradient(180.00deg, rgb(255, 255, 255),rgb(0, 0, 0) 100%),
+);
+$colorLoki: (
+        'mainColor': #345F44,
+        'gradient': linear-gradient(180.00deg, rgb(52, 95, 68),rgb(0, 0, 0) 100%),
+);
+$colorIronMan: (
+        'mainColor': #EA0055,
+        'gradient': linear-gradient(180.00deg, rgb(234, 0, 85),rgb(0, 0, 0) 100%),
+);
+$colorAmerica: (
+        'mainColor': #3A6CB6,
+        'gradient': linear-gradient(180.00deg, rgb(58, 108, 182),rgb(0, 0, 0) 100%),
+);
+$colorHulk: (
+        'mainColor': #939159,
+        'gradient': linear-gradient(180.00deg, rgb(147, 145, 89),rgb(0, 0, 0) 100%),
+);
+$colorHawkeye: (
+        'mainColor': rgba(245, 245, 245, 0.5),
+        'gradient': linear-gradient(180.00deg, rgb(223, 223, 225),rgb(0, 0, 0) 100%),
+);
+$colorPanther: (
+        'dark-grey': #393836,
+        'mainColor': #3D3C39,
+        'black':#0F1721,
+        'gradient': linear-gradient(180.00deg, rgb(63, 62, 59),rgb(0, 0, 0) 100%),
+);
+
+// ===== Breakpoints ===== //
+$breakpoints: (
+        'xsm': 420px,
+        'sm': 576px,
+        'md': 768px,
+        'lg': 992px,
+        'xl': 1440px,
+        'xxl': 1600px,
+);

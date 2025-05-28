@@ -1,0 +1,137 @@
+@use "@scss/variables" as brp;
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 12vw;
+  padding: 20px;
+  background-color: var(--navigation-bg);
+  overflow: hidden;
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 3;
+
+  @media (max-width: map-get(brp.$breakpoints, 'xxl')) {
+    max-width: 15vw;
+  }
+  @media (max-width: map-get(brp.$breakpoints, 'xl')) {
+    max-width: 20vw;
+  }
+  @media (max-width: map-get(brp.$breakpoints, 'lg')) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow-y: scroll;
+    max-width: 25vw;
+    height: 100%;
+    min-height: auto;
+  }
+  @media (max-width: map-get(brp.$breakpoints, 'md')) {
+    max-width: 45vw;
+  }
+  @media (max-width: map-get(brp.$breakpoints, 'xsm')) {
+    max-width: 80vw;
+  }
+
+    &__menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 35px;
+    transition: all 0.3s ease;
+  }
+  
+  &__item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+  }
+
+  &__link {
+    font-family: 'Marvel', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0;
+    color: var(--navigation-menu-bg);
+
+    display: block;
+    width: 100%;
+    background: transparent;
+    border: none;
+    padding: 1em 1.5em;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    overflow: visible;
+    position: relative;
+    z-index: 1;
+
+    @media (max-width: map-get(brp.$breakpoints, 'lg')) {
+      padding: 1em .5em;
+    }
+
+    &::before,
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transition: all 0.2s ease;
+    }
+
+    &::before {
+      height: 2px;
+      width: 0;
+      background-color: var(--navigation-menu-bg);
+      z-index: -1;
+    }
+
+    &::after {
+      height: 0;
+      width: 100%;
+      background-color: var(--navigation-menu-bg);
+      z-index: -1;
+      transition: 0.2s ease;
+    }
+
+    &:hover {
+      color: #1e1e2b;
+      font-weight: 700;
+      transition-delay: 0.2s;
+
+      &::before {
+        width: 100%;
+      }
+
+      &::after {
+        height: 100%;
+        transition-delay: 0.2s;
+      }
+    }
+
+  }
+
+  &__link-active {
+    background-color: var(--navigation-menu-bg);
+    color: #000000;
+  }
+}
+
+.navigation-hidden {
+  transition: all 0.4s ease .5s;
+  width: 100%;
+  max-width: 4.5vw;
+  overflow: hidden;
+
+  @media (max-width: map-get(brp.$breakpoints, 'xl')) {
+    min-width: 80px;
+  }
+}
