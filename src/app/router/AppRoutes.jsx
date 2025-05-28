@@ -1,7 +1,6 @@
 import {Route, Routes} from "react-router";
 import {routes} from "./routes.js";
-import {Suspense, useEffect, useState} from "react";
-import {Loading} from "../../shared/ui/indes.jsx";
+import {Suspense} from "react";
 
 export const AppRoutes = () => {
     return (

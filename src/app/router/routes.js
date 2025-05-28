@@ -2,12 +2,12 @@ import { lazy } from "react";
 
 export const routes = [
     {
-        path: '/',
+        path: '/Marvel/',
         element: lazy(() => import('../../pages/SettingsPages').then(m => ({ default: m.SettingsPages }))),
         props: {defaultHero: 'spider-man'}
     },
     {
-        path: '/:heroId', // Опциональный параметр
+        path: '/Marvel/:heroId', // Опциональный параметр
         element: lazy(() => import('../../pages/SettingsPages').then(m => ({ default: m.SettingsPages }))),
     }
 ];
